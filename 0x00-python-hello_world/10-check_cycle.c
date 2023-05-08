@@ -16,6 +16,8 @@ int check_cycle(listint_t *list)
 	while (temp != NULL)
 	{
 		temp = temp->next;
+		if (temp == NULL)
+			break;
 		if (temp == list || temp == temp->next)
 			return (1);
 	}
