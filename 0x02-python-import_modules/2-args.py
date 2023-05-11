@@ -4,7 +4,10 @@ if (__name__ == "__main__"):
     if (len(sys.argv) == 1):
         print("0 arguments.")
     else:
-        print(f"{len(sys.argv) - 1} arguments:")
+        if (len(sys.argv) == 2):
+            print(f"1 argument:")
+        else:
+            print(f"{len(sys.argv)} arguments:")
         i = 0
         for arg in sys.argv:
             if (i == 0):
