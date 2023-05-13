@@ -22,10 +22,10 @@ int is_palindrome(listint_t **head)
 	{
 		if (ptr[x++] != ptr[--i])
 		{
-			res = 0;
-			break;
+			free(ptr);
+			return (0);
 		}
 	}
 	free(ptr);
-	return (res);
+	return (1);
 }
