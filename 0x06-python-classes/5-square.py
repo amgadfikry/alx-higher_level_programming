@@ -26,9 +26,9 @@ class Square:
                 num: number to add to size
             """
         if not isinstance(num, int):
-            raise ValueError("size must be an intger")
+            raise TypeError("size must be an integer")
         elif num < 0:
-            raise TypeError("size must be >= 0")
+            raise ValueError("size must be >= 0")
         else:
             self.__size = num
 
