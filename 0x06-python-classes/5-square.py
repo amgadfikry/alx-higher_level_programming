@@ -4,39 +4,44 @@
 
 
 class Square:
-    """square class without any public attributes"""
+    """Class Square that has attributes. Instantiation with size"""
     def __init__(self, size=0):
-        """init methode that start instance with attribute
-            size for everyone
-            Args:
-                size: is size of square may be any data type
+        """The __init__ method for Square class
+        Args:
+             A private instance size
         """
         self.__size = size
 
     @property
     def size(self):
-        """getter methode to get size"""
+        """getter function to get size
+        Returns:
+            The size of the square
+        """
         return self.__size
 
     @size.setter
-    def size(self, num):
-        """ setter for size of square and check if digit or not
-            and less of 0 or not
-            Args:
-                num: number to add to size
-            """
-        if not isinstance(num, int):
+    def size(self, value):
+        """check errors and setter for size attribute
+        Args:
+            value: Value to checking errors
+        Raises:
+            TypeError: Exception if size is not an integer
+            ValueError: Exception if size is less than 0
+        """
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif num < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = num
+            self.__size = value
 
     def area(self):
-        """ function that calculate area of square
-            Returns: square of size
+        """Calculates the area of the square
+        Returns:
+            The area of the square
         """
-        return (self.__size * self.__size)
+        return self.__size ** 2
 
     def my_print(self):
         """function that print # accord to square area"""
@@ -47,3 +52,4 @@ class Square:
                 for i in range(self.__size):
                     print("#", end="")
                 print("")
+
