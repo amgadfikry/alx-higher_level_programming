@@ -72,13 +72,13 @@ class Square:
     def my_print(self):
         """function that print # accord to square area"""
         if self.__size == 0:
-            print()
+            print("")
         else:
             for z in range(self.position[1]):
-                print()
+                print("")
             for i in range(self.size):
                 for x in range(self.position[0]):
                     print(" ", end="")
                 for j in range(self.size):
                     print("#", end="")
-                print()
+                print("")
