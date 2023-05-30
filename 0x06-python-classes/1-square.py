@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""python script to training on classes and oop"""
+
+
 class Square:
     """ class of init attribute only"""
     def __init__(self, size):

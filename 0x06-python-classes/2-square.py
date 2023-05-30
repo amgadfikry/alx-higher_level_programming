@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+
+"""python script to training on classes and oop"""
+
+
 class Square:
     """class init attr and check it number or not"""
     def __init__(self, size=0):
-        """init methode that initate instance 
+        """init methode that initate instance
             Args:
                 size: attr to assign to attr and check it
         """

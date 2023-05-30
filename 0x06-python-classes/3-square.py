@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""python script to training on classes and oop"""
+
+
 class Square:
     """class to identify size and square"""
     def __init__(self, size=0):

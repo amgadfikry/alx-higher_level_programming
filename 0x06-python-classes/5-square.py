@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""python script to training on classes and oop"""
+
+
 class Square:
     """square class without any public attributes"""
     def __init__(self, size=0):
