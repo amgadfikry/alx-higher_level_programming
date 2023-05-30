@@ -22,6 +22,14 @@ class Square:
         """
         return self.__size
 
+    @property
+    def position(self):
+        """ getter of position attribute
+            Returns:
+                value of position
+        """
+        return self.__position
+
     @size.setter
     def size(self, value):
         """check errors and setter for size attribute
@@ -38,14 +46,6 @@ class Square:
         else:
             self.__size = value
 
-    @property
-    def position(self):
-        """ getter of position attribute
-            Returns:
-                value of position
-        """
-        return self.__position
-
     @position.setter
     def position(self, value):
         """setter of position attribute
@@ -54,16 +54,13 @@ class Square:
             Raises:
                 TypeError:if type is no tuple or values is positive
         """
-        try:
-            if not isinstance(value, tuple) or len(value) != 2:
-                raise TypeError("position must be a tuple of 2 positive integers")
-            if not isinstance(value[0], int) or not isinstance(value[1], int):
-                raise TypeError("position must be a tuple of 2 positive integers")
-            if value[0] < 0 or value[1] < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
-            self.__position = value
-        except Exception as f:
-            print(f)
+        if type(value) is not tuple or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif type(value[0]) is not int or value[0] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif type(value[1]) is not int or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         """Calculates the area of the square
@@ -77,11 +74,11 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            for z in range(self.__position[1]):
+            for z in range(self.position[1]):
                 print()
-            for i in range(self.__size):
-                for x in range(self.__position[0]):
+            for i in range(self.size):
+                for x in range(self.position[0]):
                     print(" ", end="")
-                for j in range(self.__size):
+                for j in range(self.size):
                     print("#", end="")
                 print()
