@@ -11,8 +11,8 @@ class Square:
              A private instance size
              A private intance position
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
