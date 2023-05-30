@@ -1,32 +1,22 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May 19 14:21:54 2020
-@author: Robinson Montes
-"""
+
+"""python script to training on classes and oop"""
 
 
 class Square:
-    """Class Square that has attributes. Instantiation with size
-
-    Attributes:
-        size (int): The size of the square
-    """
-
+    """Class Square that has attributes. Instantiation with size"""
     def __init__(self, size=0, position=(0, 0)):
         """The __init__ method for Square class
-
         Args:
-            size: (:obj: 'int', optional): A public instance size
-            position: (:obj: 'tuple', optional): A public instance position
+             A private instance size
+             A private intance position
         """
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
-        """Call the function to checking property
-
+        """getter function to get size
         Returns:
             The size of the square
         """
@@ -34,20 +24,17 @@ class Square:
 
     @property
     def position(self):
-        """Call the function to checking property
-
-        Returns:
-            The tuple position
+        """ getter of position attribute
+            Returns:
+                value of position
         """
         return self.__position
 
     @size.setter
     def size(self, value):
         """check errors and setter for size attribute
-
         Args:
             value: Value to checking errors
-
         Raises:
             TypeError: Exception if size is not an integer
             ValueError: Exception if size is less than 0
@@ -61,13 +48,11 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """check errors and setter for size attribute
-
-        Args:
-            value: Value to checking errors
-
-        Raises:
-            TypeError: Exception if size is not an integer
+        """setter of position attribute
+            Args:
+                value: value of position
+            Raises:
+                TypeError:if type is no tuple or values is positive
         """
         if type(value) is not tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -79,24 +64,21 @@ class Square:
 
     def area(self):
         """Calculates the area of the square
-
         Returns:
             The area of the square
         """
         return self.__size ** 2
 
     def my_print(self):
-        """Print a square using # character
-        """
-
+        """function that print # accord to square area"""
         if self.__size == 0:
-            print()
+            print("")
         else:
-            for i in range(self.position[1]):
-                print()
-            for i in range(self.size):
-                for j in range(self.position[0]):
-                    print(end=" ")
-                for k in range(self.size):
+            for z in range(self.__position[1]):
+                print("")
+            for i in range(self.__size):
+                for x in range(self.__position[0]):
+                    print(" ", end="")
+                for j in range(self.__size):
                     print("#", end="")
-                print()
+                print("")
