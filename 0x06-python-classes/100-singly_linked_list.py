@@ -63,7 +63,7 @@ class Node:
         else:
             raise TypeError("next_node must be a Node object")
 
-        
+
 class SinglyLinkedList:
     """class identify single link list and intiate it
         contain insterted new item and print its result
@@ -88,10 +88,12 @@ class SinglyLinkedList:
         else:
             ptr = self.__head
             while ptr:
-                if value > ptr.data and
-                ptr.next_node and value < ptr.next_node.data:
-                    ptr.next_node = Node(value, ptr.next_node)
-                    break
+                if value > ptr.data and ptr.next_node:
+                    if value < ptr.next_node.data:
+                        ptr.next_node = Node(value, ptr.next_node)
+                        break
+                    else:
+                        pass
                 if value > ptr.data and ptr.next_node is None:
                     ptr.next_node = Node(value)
                     break
