@@ -59,6 +59,9 @@ class Node:
             raise TypeError("next_node must be a Node object")
 
 
+"""two classes single link list"""
+
+
 class SinglyLinkedList:
     """class identify single link list"""
     def __init__(self):
@@ -97,7 +100,7 @@ class SinglyLinkedList:
     def __str__(self):
         """convert object as string
             Returns:
-                string of object
+                string of object or nothing if empty
         """
         if not self.__head:
             return
