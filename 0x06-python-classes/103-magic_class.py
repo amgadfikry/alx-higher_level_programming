@@ -11,6 +11,7 @@ class MagicClass:
             Attr:
                 radius: private readius number
         """
+        self.__radius = 0 
         if type(radius) is not int or type(radius) is not float:
             raise TypeError("radius must be a number")
         else:
