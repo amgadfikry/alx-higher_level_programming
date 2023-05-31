@@ -111,10 +111,10 @@ class SinglyLinkedList:
             Returns:
                 string of object or nothing if empty
         """
+        obj_str = ""
         if not self.__head:
-            return "\n"
+            return obj_str
         else:
-            obj_str = ""
             temp = self.__head
             while temp:
                 if not temp.next_node:
