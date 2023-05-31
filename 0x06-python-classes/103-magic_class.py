@@ -11,11 +11,10 @@ class MagicClass:
             Attr:
                 radius: private readius number
         """
-        self.__radius = 0 
-        if type(radius) is not int or type(radius) is not float:
+        self.__radius = 0
+        if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
-        else:
-            self.__radius = radius
+        self.__radius = radius
 
     def area(self):
         """ calculate area of instance
