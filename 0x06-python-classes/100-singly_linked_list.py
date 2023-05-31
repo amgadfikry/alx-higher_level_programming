@@ -44,7 +44,7 @@ class Node:
             Raises:
                 TypeError: if value is not int type
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("data must be an integer")
         else:
             self.__data = value
@@ -83,25 +83,30 @@ class SinglyLinkedList:
             Args:
                 Value: value of data of new node inserted in list
         """
+        node = Node(value)
+        node.data = value
         if not self.__head:
-            self.__head = Node(value)
+            self.__head = node
         else:
             ptr = self.__head
             while ptr:
-                if value > ptr.data and ptr.next_node:
-                    if value < ptr.next_node.data:
-                        ptr.next_node = Node(value, ptr.next_node)
+                if node.data > ptr.data and ptr.next_node:
+                    if node.data < ptr.next_node.data:
+                        node.next_node = ptr.next_node
+                        ptr.next_node = node
                         break
                     else:
                         pass
-                if value > ptr.data and ptr.next_node is None:
-                    ptr.next_node = Node(value)
+                if node.data > ptr.data and ptr.next_node is None:
+                    ptr.next_node = node
                     break
-                if value < ptr.data:
-                    self.__head = Node(value, self.__head)
+                if node.data < ptr.data:
+                    node.next_node = self.__head
+                    self.__head = node
                     break
-                if value == ptr.data:
-                    ptr.next_node = Node(value, ptr.next_node)
+                if node.data == ptr.data:
+                    node.next_node = ptr.next_node
+                    ptr.next_node = node
                     break
                 ptr = ptr.next_node
 
