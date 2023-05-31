@@ -112,7 +112,7 @@ class SinglyLinkedList:
                 string of object or nothing if empty
         """
         if not self.__head:
-            return
+            return "\n"
         else:
             obj_str = ""
             temp = self.__head
