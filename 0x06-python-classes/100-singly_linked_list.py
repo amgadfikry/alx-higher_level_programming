@@ -17,8 +17,8 @@ class Node:
                 data: instance private attr of data
                 next_node: instance private attr of next node
         """
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -84,7 +84,6 @@ class SinglyLinkedList:
                 Value: value of data of new node inserted in list
         """
         node = Node(value)
-        node.data = value
         if not self.__head:
             self.__head = node
         else:
