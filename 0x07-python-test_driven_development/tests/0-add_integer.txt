@@ -1,0 +1,77 @@
+function that add two intger together
+and check if data in intger or float
+or it abother type and cast them to int if float
+---------------------------------------------------
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+-----------------------
+test case of normal int
+------------------------
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(5, -3)
+2
+
+>>> add_integer(-1, -1)
+-2
+
+------------------------
+test case of empty b arg
+-------------------------
+
+>>> add_integer(1)
+99
+
+>>> add_integer(2)
+100
+
+>>> add_integer(-2)
+96
+
+-----------------------
+test case of float args
+------------------------
+
+>>> add_integer(2.5, 2)
+4
+
+>>> add_integer(2, 3.5)
+5
+
+>>> add_integer(2.5, 2.5)
+4
+
+>>> add_integer(-2.5, -2.5)
+-4
+
+--------------------------------------------------
+test case of other types of data not int or float
+--------------------------------------------------
+
+>>> add_integer("3", 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(3, "ff")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer("3", "5")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(" ")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer([6, 7])
+Traceback (most recent call last):
+...     
+TypeError: a must be an integer
