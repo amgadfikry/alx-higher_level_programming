@@ -3,7 +3,7 @@
 
 
 def add_integer(a, b=98):
-    """ function that add two int 
+    """ function that add two int
         and check if there int or float
         if float cast them to int
         Parameters:
