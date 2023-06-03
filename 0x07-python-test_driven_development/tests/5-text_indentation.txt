@@ -1,0 +1,61 @@
+function that split string accord to specific characters
+--------------------------------------------------
+
+>>> txt = __import__("5-text_indentation").text_indentation
+
+------------------
+normal values test
+------------------
+
+>>> txt("amgad:fikry?mohamed?")
+amgad:
+<BLANKLINE>
+fikry?
+<BLANKLINE>
+mohamed?
+<BLANKLINE>
+
+>>> txt("")
+<BLANKLINE>
+
+>>> txt(":?.")
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> txt("   amgad: fikry?   :   mohamed.")
+amgad:
+<BLANKLINE>
+fikry?
+<BLANKLINE>
+:
+<BLANKLINE>
+mohamed.
+<BLANKLINE>
+
+-------------------
+no args in function
+-------------------
+
+>>> txt()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+-------------------
+text are not string
+-------------------
+
+>>> txt(777)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> txt(["amgad"])
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> txt(("amgad", "fikry"))
+Traceback (most recent call last):
+TypeError: text must be a string
