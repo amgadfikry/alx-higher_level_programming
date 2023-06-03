@@ -54,3 +54,31 @@ Write a function that prints My name is <first name> <last name>
 - Prototype: def say_my_name(first_name, last_name=""):
 - first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
 - You are not allowed to import any module
+
+#### 4-print_square.py, tests/4-print_square.txt
+Write a function that prints a square with the character #.
+
+- Prototype: def print_square(size):
+- size is the size length of the square
+- size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
+- if size is less than 0, raise a ValueError exception with the message size must be >= 0
+- if size is a float and is less than 0, raise a TypeError exception with the message size must be an integer
+- You are not allowed to import any module
+
+#### 5-text_indentation.py, tests/5-text_indentation.txt
+Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
+
+- Prototype: def text_indentation(text):
+- text must be a string, otherwise raise a TypeError exception with the message text must be a string
+- There should be no space at the beginning or at the end of each printed line
+- You are not allowed to import any module
+
+#### tests/6-max_integer_test.py
+In this task, you will write unittests for the function def max_integer(list=[]):.
+
+- Your test file should be inside a folder tests
+- You have to use the unittest module
+- Your test file should be python files (extension: .py)
+- Your test file should be executed by using this command: python3 -m unittest tests.6-max_integer_test
+- All tests you make must be passable by the function below
+- We strongly encourage you to work together on test cases, so that you don’t miss any edge case
