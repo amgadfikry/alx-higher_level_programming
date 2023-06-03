@@ -1,0 +1,49 @@
+function that print full name
+---------------------------------------------
+
+>>> say = __import__("3-say_my_name").say_my_name
+
+------------
+normal cases
+------------
+
+>>> say("amgad", "fikry")
+My name is amgad fikry
+
+>>> say("amgad") # doctest: +NORMALIZE_WHITESPACE
+My name is amgad 
+
+>>> say("   ", "fikry") # doctest: +NORMALIZE_WHITESPACE
+My name is     fikry
+
+>>> say("") # doctest: +NORMALIZE_WHITESPACE
+My name is 
+
+--------------
+empty function
+--------------
+
+>>> say()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+----------------------------
+first or last arg not string
+----------------------------
+
+>>> say(777, "fikry")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say(["amgad"], "fikry")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say("amgad", 7778)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say(777, ("fikry",))
+Traceback (most recent call last):
+TypeError: first_name must be a string
