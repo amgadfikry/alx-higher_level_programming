@@ -1,0 +1,74 @@
+function that print square with character '#'
+---------------------------------------------
+
+>>> sq = __import__("4-print_square").print_square
+
+-------------
+normal values
+-------------
+
+>>> sq(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+>>> sq(1)
+#
+
+>>> sq(2)
+##
+##
+
+>>> sq(0)
+<BLANKLINE>
+
+---------------
+size is not int
+---------------
+
+>>> sq("int")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> sq("6")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> sq(3.5)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> sq(-3.7)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> sq(0.00)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+----------------
+size less than 0
+----------------
+
+>>> sq(-1)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+>>> sq(-20)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+----------
+empty args
+----------
+
+>>> sq()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
