@@ -89,12 +89,12 @@ class Rectangle:
                 string of # that represent the rectangle
         """
         arr = ""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return arr
-        for i in range(self.__height):
-            for x in range(self.__width):
+        for i in range(self.height):
+            for x in range(self.width):
                 arr += "#"
-            if i != self.__height - 1:
+            if i != self.height - 1:
                 arr += "\n"
         return arr
 
@@ -103,4 +103,4 @@ class Rectangle:
             Returns:
                 object string representation of instance
         """
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"Rectangle({self.width}, {self.height})"
