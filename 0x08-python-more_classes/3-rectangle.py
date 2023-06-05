@@ -90,9 +90,10 @@ class Rectangle:
         """
         arr = ""
         if self.__width == 0 or self.__height == 0:
-            return arr+"\n"
+            return arr
         for i in range(self.__height):
             for x in range(self.__width):
                 arr += "#"
-            arr += "\n"
+            if i != self.__width - 1:
+                arr += "\n"
         return arr
