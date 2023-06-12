@@ -12,8 +12,10 @@ class Rectangle(p_cls):
                 width: width of rect
                 height: height of rect
         """
-        self.__width = super().integer_validator("width", width)
-        self.__height = super().integer_validator("height", height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """ calculate area of rectangle
