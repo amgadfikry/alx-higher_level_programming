@@ -1,0 +1,50 @@
+-------------------------------
+test fot parent class of geometry 
+-------------------------------
+
+>>> cls = __import__("7-base_geometry").BaseGeometry
+
+-------------------------------
+
+Documentation test
+
+>>> x = __import__("7-base_geometry").__doc__
+>>> len(x) > 0
+True
+
+>>> x = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> len(x) > 0
+True
+
+>>> x = __import__("7-base_geometry").BaseGeometry.area.__doc__
+>>> len(x) > 0
+True
+
+>>> x = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> len(x) > 0
+True
+
+----------------------------------------------
+
+Raises exception errors
+
+>>> x = cls()
+>>> x.integer_validator("amgad", "name")
+Traceback (most recent call last):
+TypeError: amgad must be an integer
+
+>>> x.integer_validator("weza", 0)
+Traceback (most recent call last):
+ValueError: weza must be greater than 0
+
+>>> x.integer_validator("asmaa", -3)
+Traceback (most recent call last):
+ValueError: asmaa must be greater than 0
+
+--------------------------------------------------
+
+normal test 
+
+>>> x.integer_validator("name", 3)
+>>> x.integer_validator("name", 40)
+>>> x.integer_validator("name", 10)
