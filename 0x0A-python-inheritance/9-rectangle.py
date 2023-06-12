@@ -27,4 +27,4 @@ class Rectangle(p_cls):
     def __str__(self):
         """magic method that print str represent class
         """
-        return f"[{self.__class__.__name__}] {self.__width}/{self.__height}"
+        return f"[Rectangle] {self.__width}/{self.__height}"
