@@ -38,6 +38,9 @@ try:
             for x in sorted(row):
                 print(f"{x}: {dic[x]}")
             i = 0
+    print(f"File size: {size}")
+    for x in sorted(row):
+        print(f"{x}: {dic[x]}")
 except KeyboardInterrupt:
     print(f"File size: {size}")
     for x in sorted(row):
