@@ -21,11 +21,17 @@ i = 0
 try:
     for line in sys.stdin:
         li = line.split(" ")
-        size += int(li[-1])
-        if li[-2] in dic:
-            dic[li[-2]] += 1
-            if li[-2] not in row:
-                row.append(li[-2])
+        try:
+            size += int(li[-1])
+        except (IndexError, ValueError):
+            pass
+        try:
+            if li[-2] in dic:
+                dic[li[-2]] += 1
+                if li[-2] not in row:
+                    row.append(li[-2])
+        except IndexError:
+            pass
         i += 1
         if i == 10:
             print(f"File size: {size}")
