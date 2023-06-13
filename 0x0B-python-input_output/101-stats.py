@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+""" python script that read from stdin
+    then each line search for status code
+    then every 10 line print code, number, size
+"""
 import sys
 
 size = 0
