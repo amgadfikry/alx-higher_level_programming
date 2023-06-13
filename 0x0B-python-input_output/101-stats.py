@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 import sys
-""" module read from input """
-
 
 size = 0
 dic = {
