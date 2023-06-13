@@ -15,7 +15,6 @@ dic = {
 row = []
 i = 0
 for line in sys.stdin:
-
     li = line.split(" ")
     size += int(li[-1])
     if li[-2] in dic:
@@ -27,4 +26,4 @@ for line in sys.stdin:
         print(f"File size: {size}")
         for x in sorted(row):
             print(f"{x}: {dic[x]}")
-            i = 0
+        i = 0
