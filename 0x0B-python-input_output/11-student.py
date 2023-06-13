@@ -37,4 +37,4 @@ class Student:
             attributes in json
         """
         for key, value in json.items():
-            self.key = value
+            setattr(self, key, value)
