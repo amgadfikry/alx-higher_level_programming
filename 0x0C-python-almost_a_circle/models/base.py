@@ -94,7 +94,7 @@ class Base:
                 new instance
         """
         if cls.__name__ == "Rectangle":
-            new_ins = cls(2,4)
+            new_ins = cls(2, 4)
         else:
             new_ins = cls(3)
         new_ins.update(**dictionary)
