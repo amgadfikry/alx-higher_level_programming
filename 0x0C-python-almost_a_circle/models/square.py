@@ -36,7 +36,7 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
-        sel.__size = value
+        self.__size = value
 
     def __str__(self):
         """ magic method that repesent class in string
