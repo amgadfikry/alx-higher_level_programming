@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+""" module for base class that inhereted by classes """
 import json
 import csv
-""" module for base class """
 
 
 class Base:
@@ -99,7 +99,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """ class method that return list of instance from file
+        """ class method that return list of instance get off file
             Returns:
                 list of instance
         """
@@ -116,7 +116,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """ class method that read from csv file and get list of
+        """ class method that read csv file and get list of
             instance in it
             Return:
                 list of instance
