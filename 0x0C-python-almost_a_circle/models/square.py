@@ -26,7 +26,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """ getter of size attribute value """
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -36,7 +36,6 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
-        self.__size = self.width
 
     def __str__(self):
         """ magic method that repesent class in string
