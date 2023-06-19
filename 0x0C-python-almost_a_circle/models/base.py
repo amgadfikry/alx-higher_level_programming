@@ -93,7 +93,10 @@ class Base:
             Returns:
                 new instance
         """
-        new_ins = cls(1, 1, 1)
+        if cls.__name__ == "Rectangle":
+            new_ins = cls(2,4)
+        else:
+            new_ins = cls(3)
         new_ins.update(**dictionary)
         return new_ins
 
