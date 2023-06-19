@@ -2,6 +2,7 @@
 """ module for base class that inhereted by classes """
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -94,7 +95,7 @@ class Base:
                 new instance
         """
         if cls.__name__ == "Rectangle":
-            new_ins = cls(2, 4)
+            new_ins = cls(1, 1)
         else:
             new_ins = cls(3)
         new_ins.update(**dictionary)
@@ -137,3 +138,36 @@ class Base:
                 return ins_list
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ method using turtle module to draw list
+            rectangle and squares
+            Parameters:
+                list_rectangles: list of rectangle instance
+                list_squares: list of square instance
+        """
+        win = turtle.Turtle()
+        for rect in list_rectangles:
+            win.penup()
+            win.goto(rect.x, rect.y)
+            win.pensize(2)
+            win.pencolor("blue")
+            win.pendown()
+            for i in range(0, 2):
+                win.forward(rect.width)
+                win.right(90)
+                win.forward(rect.height)
+                win.right(90)
+            win.penup()
+        for sq in list_squares:
+            win.penup()
+            win.goto(sq.x, sq.y)
+            win.pensize(3)
+            win.pencolor("red")
+            win.pendown()
+            for i in range(0, 4):
+                win.forward(sq.size)
+                win.right(90)
+            win.penup()
+        turtle.done()
