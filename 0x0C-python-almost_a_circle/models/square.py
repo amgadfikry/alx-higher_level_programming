@@ -86,7 +86,9 @@ class Square(Rectangle):
         dic_x = {}
         for key, value in dic.items():
             k = key.split("_")[-1]
-            if k in ["width", "height"]:
+            if k in ["height", "size"]:
+                continue
+            if k is "width":
                 dic_x["size"] = value
             dic_x[k] = value
         return dic_x
