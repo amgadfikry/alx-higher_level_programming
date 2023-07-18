@@ -1,3 +1,3 @@
 -- show all table secription
 -- statement that show full table decription
-DESC first_table
+SHOW CREATE TABLE first_table
