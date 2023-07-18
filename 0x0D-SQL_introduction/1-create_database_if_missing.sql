@@ -1,3 +1,3 @@
 -- script to create new table
 -- create new table
-CREATE DATABASE IF NOT EXISTS hbnb_0c_0;
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
