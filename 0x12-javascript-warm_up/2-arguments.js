@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const pro = require('node:process');
+const pro = process;
 
 if (pro.argv.length < 3) {
   console.log('No argument');
