@@ -124,6 +124,18 @@ Write a script that searches the second biggest integer in the list of arguments
 Update this script to replace the value 12 with 89:
 
 - You are not allowed to use var
+```
+#!/usr/bin/node
+const myObject = {
+  type: 'object',
+  value: 12
+};
+console.log(myObject);
+/*
+YOUR CODE HERE
+*/
+console.log(myObject);
+```
 
 #### 13-add.js
 Write a function that returns the addition of 2 integers.
@@ -131,3 +143,62 @@ Write a function that returns the addition of 2 integers.
 - The function must be visible from outside
 - The name of the function must be add
 - You are not allowed to use var
+
+#### 100-let_me_const.js
+Write a file that modifies the value of myVar to 333
+```
+#!/usr/bin/node
+myVar = 89;
+require('./100-let_me_const')
+console.log(myVar);
+```
+
+#### 101-call_me_moby.js
+Write a function that executes x times a function.
+
+- The function must be visible from outside
+- Prototype: function (x, theFunction)
+- You are not allowed to use var
+```
+#!/usr/bin/node
+const callMeMoby = require('./101-call_me_moby').callMeMoby;
+callMeMoby(3, function () {
+  console.log('C is fun');
+});
+```
+
+#### 102-add_me_maybe.js
+Write a function that increments and calls a function.
+
+- The function must be visible from outside
+- Prototype: function (number, theFunction)
+- You are not allowed to use var
+```
+#!/usr/bin/node
+const addMeMaybe = require('./102-add_me_maybe').addMeMaybe;
+addMeMaybe(4, function (nb) {
+  console.log('New value: ' + nb);
+});
+```
+
+#### 103-object_fct.js
+Update this script by adding a new function incr that increments the integer value.
+
+- You are not allowed to use var
+```
+#!/usr/bin/node
+const myObject = {
+  type: 'object',
+  value: 12
+};
+console.log(myObject);
+/*
+YOUR CODE HERE
+*/
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
+```
