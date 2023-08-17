@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+""" module to filter db according to atgv provided """
+import MySQLdb
+from sys import argv
+
+
+def main():
+    """ finction that not run when imported as module """
+    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
+                         passwd=argv[2], db=argv[3])
+    start = db.cursor()
+    start.execute("SELECT * FROM states WHERE states.name = '{}'\
+                  ORDER BY states.id".format(argv[4]))
+    rows = start.fetchall()
+    for row in rows:
+        print(row)
+
+
+if __name__ == "__main__":
+    main()
