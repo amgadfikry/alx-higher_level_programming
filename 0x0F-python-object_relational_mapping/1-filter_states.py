@@ -9,7 +9,7 @@ def main():
     db = MySQLdb.connect(host="localhost", user=sys.argv[1], port=3306,
                          passwd=sys.argv[2], db=sys.argv[3])
     start = db.cursor()
-    start.execute("""SELECT * FROM states WHERE states.name LIKE 'N%'
+    start.execute("""SELECT * FROM states WHERE states.name LIKE BINARY 'N%'
                         ORDER BY states.id""")
     rows = start.fetchall()
     for row in rows:
