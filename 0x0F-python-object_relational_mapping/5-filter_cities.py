@@ -15,6 +15,8 @@ def main():
             ORDER BY cities.id"""
     start.execute(query, (argv[4],))
     rows = start.fetchall()
+    if len(rows) == 0:
+        print()
     for i in range(len(rows)):
         print(rows[i][0], end="")
         if i == len(rows) - 1:
