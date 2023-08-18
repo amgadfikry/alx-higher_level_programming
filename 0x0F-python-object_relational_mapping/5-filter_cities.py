@@ -16,10 +16,11 @@ def main():
     start.execute(query, (argv[4],))
     rows = start.fetchall()
     for i in range(len(rows)):
+        print(rows[i][0], end="")
         if i == len(rows) - 1:
-            print(rows[i][0])
+            print()
         else:
-            print(rows[i][0], end=", ")
+            print(end=", ")
     start.close()
     db.close()
 
