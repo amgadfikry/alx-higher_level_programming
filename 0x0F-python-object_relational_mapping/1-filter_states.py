@@ -14,6 +14,8 @@ def main():
     rows = start.fetchall()
     for row in rows:
         print(row)
+    start.close()
+    db.close()
 
 
 if __name__ == "__main__":
