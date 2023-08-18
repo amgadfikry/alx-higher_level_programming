@@ -18,7 +18,8 @@ def main():
     for i in range(len(rows)):
         if i == len(rows) - 1:
             print(rows[i][0])
-        print(rows[i][0], end=", ")
+        else:
+            print(rows[i][0], end=", ")
     start.close()
     db.close()
 
