@@ -5,6 +5,7 @@ from sqlalchemy.orm import sessionmaker, Session
 from model_state import State, Base
 from sys import argv
 
+
 def main():
     """function that not start if imported"""
     engine = create_engine(f"mysql+mysqldb://{argv[1]}:{argv[2]}\
