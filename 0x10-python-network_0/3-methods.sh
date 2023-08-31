@@ -1,3 +1,3 @@
 #!/bin/bash
 # script show methods can use on this url
-curl -si $1 | grep -i "allow" | cut -d " " -f 2-
+curl -sI "$1" | grep "Allow" | cut -d " " -f 2-
