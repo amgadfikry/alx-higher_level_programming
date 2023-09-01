@@ -7,7 +7,8 @@ def main():
     """ function make file not excute if it is not imported """
     url = "https://alx-intranet.hbtn.io/status"
     with urllib.request.urlopen(url) as res:
-        print(res.read())
+        body = res.read().decode("utf-8")
+        print(body)
 
 
 if __name__ == "__main__":
