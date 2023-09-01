@@ -10,7 +10,7 @@ def main():
     url = "http://0.0.0.0:5000/search_user"
     if len(argv) > 1:
         payload['q'] = argv[1]
-    res = requests.post(url, params=payload)
+    res = requests.post(url, data=payload)
     try:
         data = res.json()
         if data == {}:
