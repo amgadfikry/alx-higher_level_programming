@@ -8,8 +8,8 @@ from urllib.error import HTTPError
 def main():
     """ function make file not excute if it is not imported """
     try:
-        res = urlopen(argv[1])
-        print(res.read().decode("utf-8"))
+        with urlopen(argv[1]) as res:
+            print(res.read().decode("utf-8"))
     except HTTPError as e:
         print(f"Error code: {e.code}")
 
