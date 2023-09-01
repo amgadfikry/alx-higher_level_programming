@@ -8,13 +8,12 @@ def main():
     url = "https://alx-intranet.hbtn.io/status"
     with urllib.request.urlopen(url) as res:
         body = res.read()
-        print("""Body response:
-    - type: {}
-    - content: {}
-    - utf8 content: {}""".format(
-                type(body),
-                body,
-                body.decode("utf-8")))
+        text = """Body response:
+\t- type: {}
+\t- content: {}
+\t- utf8 content: {}""".format(
+            type(body), body, body.decode("utf-8"))
+        print(text)
 
 
 if __name__ == "__main__":
