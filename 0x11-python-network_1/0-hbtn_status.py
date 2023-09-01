@@ -9,13 +9,12 @@ def main():
     with urllib.request.urlopen(url) as res:
         body = res.read()
         print("""Body response:
-            - type: {}
-            - content: {}
-            - utf8 content: {}""".format(
+    - type: {}
+    - content: {}
+    - utf8 content: {}""".format(
                 type(body),
                 body,
-                body.decode("utf-8"))
-            )
+                body.decode("utf-8")))
 
 
 if __name__ == "__main__":
