@@ -8,8 +8,8 @@ def main():
     res = get("https://alx-intranet.hbtn.io/status")
     print("""Body response:
 \t- type: {}
-\t- content: {}""".format(type(res.text), res.text)
-)
+\t- content: {}""".format(type(res.text), res.text))
+
 
 if __name__ == "__main__":
     main()
