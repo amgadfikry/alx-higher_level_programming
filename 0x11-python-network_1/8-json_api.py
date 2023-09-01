@@ -11,13 +11,13 @@ def main():
     if len(argv) > 1:
         payload['q'] = argv[1]
     res = requests.post(url, params=payload)
-    if res.headers.get("content-type") == "application/json":
+    try:
         data = res.json()
-        if data:
-            print(f"[{data.get('id')}] {data.get('name')}")
-        else:
+        if data == {}:
             print("No result")
-    else:
+        else:
+            print(f"[{data.get('id')}] {data.get('name')}")
+    except ValueError:
         print("Not a valid JSON")
 
 
