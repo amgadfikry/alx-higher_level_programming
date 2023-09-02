@@ -7,10 +7,12 @@ from sys import argv
 def main():
     """function to prevent run if imported"""
     url = f"https://api.github.com/repos/{argv[2]}/{argv[1]}/commits"
-    res = get(url)
-    data = res.json()[:10]
-    for i in range(10):
-        print(f"{data[i]['sha']}: {data[i]['commit']['author']['name']}")
+    data = get(url).json()
+    try:
+        for i in range(10):
+            print(f"{data[i]['sha']}: {data[i]['commit']['author']['name']}")
+    except IndexError:
+        pass
 
 
 if __name__ == "__main__":
